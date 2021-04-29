@@ -75,6 +75,7 @@ public class MbtiMainUIEvent implements ActionListener {
 			} else {
 				JOptionPane.showMessageDialog(null, "아이디와 비밀번호가 일치하지 않습니다.");
 				main.id_tf.setText("");		main.pw_tf.setText("");
+				main.id_tf.requestFocus();
 			}
 		}
 
