@@ -68,6 +68,7 @@ public class JoinUI {
 		for(String name : namelist) {
 			Panel l_panel = new Panel(new FlowLayout(FlowLayout.LEFT));
 			JLabel textJLabel = new JLabel(name); 
+			textJLabel.setFont(Commons.getFont());
 			l_panel.add(textJLabel);
 			JLabel_panel.add(l_panel);
 			

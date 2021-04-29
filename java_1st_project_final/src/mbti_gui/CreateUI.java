@@ -36,7 +36,6 @@ public class CreateUI implements ActionListener{
 			  bottom_normal, bottom_rollover, bottom_pressed;
 	Random random;
 	UserVO user;
-	ArrayList<ItemVO> item;
 	
 	//Constructor
 	public CreateUI(MbtiMainUI main) {
@@ -48,7 +47,6 @@ public class CreateUI implements ActionListener{
 	public void init() {
 		main.switch_panel(MbtiMainUI.CREATE);
 		user = main.system.searchUser(main.id_tf.getText());
-//		item = main.system.getItem();
 		
 		/** 포인트 패널 **/
 		point_panel = new JPanel(new FlowLayout(FlowLayout.RIGHT,10,50));
