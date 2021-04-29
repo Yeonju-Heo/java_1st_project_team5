@@ -190,13 +190,15 @@ public class MypageUI implements ActionListener{
 	         
 	      }else if(obj == btn_update_info) {
 			System.out.println("정보수정");
-			int con = JOptionPane.showConfirmDialog(null, Commons.getMsg("회원정보를 수정하시겠습니까?"));
-			if(con == 0) {
-				if(main.system.updateUser(user, pwd.getText())!=0) {
-					JOptionPane.showMessageDialog(null, Commons.getMsg("수정이 완료되었습니다"));
-					pwd.setText("");
-				}else {
-					JOptionPane.showMessageDialog(null, Commons.getMsg("수정에 실패하였습니다"));
+			if(passCheck()) {
+				int con = JOptionPane.showConfirmDialog(null, Commons.getMsg("회원정보를 수정하시겠습니까?"));
+				if(con == 0) {
+					if(main.system.updateUser(user, pwd.getText())!=0) {
+						JOptionPane.showMessageDialog(null, Commons.getMsg("수정이 완료되었습니다"));
+						pwd.setText("");
+					}else {
+						JOptionPane.showMessageDialog(null, Commons.getMsg("수정에 실패하였습니다"));
+					}
 				}
 			}
 		}else if(obj == btn_delete_account) {
@@ -222,6 +224,20 @@ public class MypageUI implements ActionListener{
 			}
 		}
 	
+	}
+	
+	/** 유효성 검사 **/
+	public boolean passCheck() {
+		boolean result = false;
+		
+		if(pwd.getText().equals("")) {
+			JOptionPane.showMessageDialog(null, Commons.getMsg("비밀번호를 입력해주세요"));
+			pwd.requestFocus();
+		}else {
+			result = true;
+		}
+		
+		return result;
 	}
 	
 }
