@@ -85,12 +85,13 @@ public class ChatUI implements ActionListener{
 		jp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		chat_content.setFont(Commons.getFont());
 		left_panel.add(jp);
+		chat_content.setEditable(false);
 		
 		//채팅 오른쪽 패널
 		user_panel = new JPanel(new GridLayout());
 		la_user = new JLabel("채팅 접속자 목록");
 		la_user.setHorizontalAlignment(JLabel.CENTER);
-		la_count = new JLabel("0명 접속중");
+		la_count = new JLabel("0명 접속 중");
 		la_count.setHorizontalAlignment(JLabel.CENTER);
 		la_user.setFont(Commons.getFont());
 		user_list.setFont(Commons.getFont());

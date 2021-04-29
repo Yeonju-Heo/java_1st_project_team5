@@ -48,7 +48,7 @@ public class ChatServer {
 				Vector<String> copy_list = (Vector<String>)user_list.clone();
 				vo.setUser_list(copy_list);
 				vo.setMsg("---------------->>" + 
-						vo.getName() + "(" + vo.getMbti() + ")" + "¥‘¿Ã ¿‘¿Â«œºÀΩ¿¥œ¥Ÿ.");
+						vo.getName() + "(" + vo.getMbti() + ")" + "¥‘¿Ã ¿‘¿Â«œºÃΩ¿¥œ¥Ÿ.");
 				
 			}else if(vo.getStatus() == MessageVO.TALK) {
 				Vector<String> copy_list = (Vector<String>)user_list.clone();
